@@ -101,15 +101,24 @@ namespace HelloDungeon
                    
                     Console.WriteLine(" (Light) Double Slash or (Strong) Single Slash");
                     input = Console.ReadLine();
-                    if (input == "") { }
+                    if (input == "Light")
+                    {
+                        Console.WriteLine(" You Slash twice and killed the goblin");
+                        Console.WriteLine();
+
+                        Console.WriteLine(" YOU WIN");
+                    }
 
 
 
                 }
 
                 {
-                    if (input == "Fight "); 
-                    
+                    if (input == "Fight ");
+
+                    Console.WriteLine("Because you chose to fight you get a hidden buff for only True Worriors " + 
+                        " You scream out activating the buff (BERSERK MODE) 100% damage increase ");
+
                 }
             }
 
