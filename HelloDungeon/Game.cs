@@ -19,11 +19,11 @@ namespace HelloDungeon
             int playerHealthPotion = 5;
             int playerManaPotion = 5;
             int playerFood = 3;
-            string playerItem1 = "Sword";
-            string itemHp = "Durability"; 
-  
-           
-            
+            string dooroption1 = "Door1";
+            string dooroption2 = "Door2";
+            string playerRole = "Warrior" ;
+
+
             Console.WriteLine("Hello , " + playerName);
             Console.WriteLine();
             Console.WriteLine("Welcome to my dungeon!");
@@ -36,10 +36,56 @@ namespace HelloDungeon
             Console.WriteLine("HPpot; " + playerHealthPotion);
             Console.WriteLine("MPpot; " + playerManaPotion);
             Console.WriteLine("Food; " +  playerFood);
-            Console.WriteLine("Item;" + playerItem1);
+
+            Console.WriteLine("Are you a Warrior or a Wizard?");
+
+
+            string input = "";
+
+
+
+            while (input != "1" && input != "2")
+            {
+                Console.Write("1 | 2 > ");
+                input = Console.ReadLine();
+
+                if (input == "1")
+                {
+                    playerRole = "Warrior";
+                }
+                else if (input == "2")
+                {
+                    playerRole = "Wizard";
+                }
+            }
+            Console.WriteLine("Player role: " + playerRole);
+
+
+            Console.WriteLine("So, you chose " + playerRole + "Now you have a second decision");
+
+
+
             Console.WriteLine("You find yourself in await Generic dungeon " +
-                "with two doors. Which door do you chose?");
-            
+            "with two doors. Which door do you chose?");
+
+
+            Console.WriteLine();
+            Console.WriteLine("Door 1 or Door 2");
+            input = Console.ReadLine();
+
+            if (input == "1")
+            {
+
+                Console.WriteLine("Looks like you chose " + dooroption1);
+            }
+
+            if (input == "2")
+            {
+
+                Console.WriteLine("Looks like you chose " + dooroption2);
+            }
+
+
         }
     }
 }
