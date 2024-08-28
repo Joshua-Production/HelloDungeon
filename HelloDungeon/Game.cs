@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,8 +22,8 @@ namespace HelloDungeon
             int playerFood = 3;
             string dooroption1 = "Door1";
             string dooroption2 = "Door2";
-            string playerRole = "Warrior" ;
-
+            string playerRole1 = "Warrior" ;
+            string playerRole2 = "Wizard";
 
             Console.WriteLine("Hello , " + playerName);
             Console.WriteLine();
@@ -51,21 +52,21 @@ namespace HelloDungeon
 
                 if (input == "1")
                 {
-                    playerRole = "Warrior";
+                    playerRole1 = "Warrior";
                 }
                 else if (input == "2")
                 {
-                    playerRole = "Wizard";
+                    playerRole2 = "Wizard";
                 }
             }
-            Console.WriteLine("Player role: " + playerRole);
+            Console.WriteLine("Player role: " + playerRole1);
 
 
-            Console.WriteLine("So, you chose " + playerRole + "Now you have a second decision");
+            Console.WriteLine("So, you chose " + playerRole2 + " Now you have a second decision");
 
 
 
-            Console.WriteLine("You find yourself in await Generic dungeon " +
+            Console.WriteLine("You find yourself in a dungeon " +
             "with two doors. Which door do you chose?");
 
 
@@ -77,12 +78,50 @@ namespace HelloDungeon
             {
 
                 Console.WriteLine("Looks like you chose " + dooroption1);
+                Console.WriteLine("As you enter Door 1 you see a giant goblin ," +
+                    " Will you Flee or Fight?");
+                Console.WriteLine();
+                Console.WriteLine(" Flee or Fight ");
+                input = Console.ReadLine();
+                
+
+                if (input == "Flee")
+                {
+                    Console.WriteLine(" As you turn to Flee the door slams shut trapping you in the room forcing you to fight. " +
+                        " You turn back around to see that the goblin is about to strike you. You atempt to block but the goblin hits you! " +
+                       " Cutting your HP from " +
+                       playerHealth + " To " + playerHealth / 2f);
+                    Console.Write(" Press any key to continue ");
+                    Console.ReadKey();
+
+
+                    Console.Clear();
+                    Console.WriteLine(" As you get back up you dash at the goblin how will you attack? " +
+                        "A double slash or A Strong Single Slash");
+                   
+                    Console.WriteLine(" (Light) Double Slash or (Strong) Single Slash");
+                    input = Console.ReadLine();
+                    if (input == "") { }
+
+
+
+                }
+
+                {
+                    if (input == "Fight "); 
+                    
+                }
             }
 
             if (input == "2")
             {
 
                 Console.WriteLine("Looks like you chose " + dooroption2);
+                Console.WriteLine("As you enter Door 2 you see a Mage who on sight starts to power up a powerful looking spell");
+
+
+
+
             }
 
 
