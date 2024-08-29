@@ -109,16 +109,27 @@ namespace HelloDungeon
                         Console.WriteLine(" YOU WIN");
                     }
 
+                    if (input == "Strong")
+                    {
+                        Console.WriteLine("You chose to finish this fight in one Strong Slash" + 
+                            "So you slash spliting the goblin in 2");
 
+                        Console.WriteLine();
+                        Console.WriteLine("YOU WIN");
+
+
+                    }
 
                 }
 
                 {
                     if (input == "Fight ");
 
-                    Console.WriteLine("Because you chose to fight you get a hidden buff for only True Worriors " + 
+                    Console.WriteLine("Ah you chose to fight I will now bless you with a hidden buff for only True Worriors " + 
                         " You scream out activating the buff (BERSERK MODE) 100% damage increase ");
-
+                    Console.WriteLine();
+                    Console.WriteLine("You dash at the goblin taking it down in one shot");
+                    Console.WriteLine("YOU WIN");
                 }
             }
 
@@ -128,12 +139,27 @@ namespace HelloDungeon
                 Console.WriteLine("Looks like you chose " + dooroption2);
                 Console.WriteLine("As you enter Door 2 you see a Mage who on sight starts to power up a powerful looking spell");
 
+                Console.WriteLine("Looks like that leaves you wiht two options Flee or Fight");
+                Console.WriteLine();
+                Console.WriteLine(" Flee or Fight ");
+                input = Console.ReadLine();
 
+                if (input == "Flee")
+                {
+                    Console.WriteLine(" As you turn to Flee the mage fires a powerful spell made of Light killing you in one blow");
+                    Console.WriteLine("YOU LOSE");
 
+                }
 
+                if (input == "Fight ")
+                {
+                    Console.WriteLine(" Ah a choice only a True Fighter would make I will bless you with a buff that will get you on the same speed of this Mages spells");
+                    Console.WriteLine(" You feel your heart skip a beat as you see the Mage fired off his spell then you become surronded by pure Light and absorb its power granting a new buff (SPEED OF LIGHT)");
+
+                    Console.WriteLine(" Now that you have the buff you are able to dodge the spell and ")
+
+                }
+                  
             }
-
-
         }
-    }
 }
