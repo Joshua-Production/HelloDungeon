@@ -171,7 +171,7 @@ namespace HelloDungeon
 
             input = 0;
 
-            GetInput(" Two Doors appear infront of you These doors may look the same but the path they bring you on is for you to decide ", "Door 1", "Door 2");
+           input = GetInput(" Two Doors appear infront of you These doors may look the same but the path they bring you on is for you to decide ", "Door 1", "Door 2");
            
             
 
