@@ -71,7 +71,7 @@ namespace HelloDungeon
         /// <summary>
         /// 
         /// </summary> 
-        /// <param name="description">The names of the options</param>           
+        /// <param name="description">Describes the options</param>           
         /// <param name="option1">The 1st option</param>
         /// <param name="option2">The 2nd option</param>
         /// <returns></returns>
@@ -118,6 +118,8 @@ namespace HelloDungeon
             //return inputReceived integer;
             return inputRecieved;
         }
+
+        
     
          
         //Mothod declared 
@@ -130,6 +132,8 @@ namespace HelloDungeon
             Console.WriteLine(" Hello Jim"); 
             Console.WriteLine(" I see that you found my dungeon... Now i will give you a choice would you like to be a Warrior or a Wizard? ");
             
+            //default input value reset to 0
+
             int input = 0;
 
            
@@ -145,9 +149,7 @@ namespace HelloDungeon
                 player1.Role = "Wizard";
             }
 
-            Console.WriteLine(" Player role: " + player1.Role);
-            Console.WriteLine("");
-
+      
             Console.WriteLine(" So, you chose " + player1.Role);
             Console.WriteLine("");
             Console.WriteLine(" These are your stats.");
@@ -172,8 +174,18 @@ namespace HelloDungeon
             input = 0;
 
            input = GetInput(" Two Doors appear infront of you These doors may look the same but the path they bring you on is for you to decide ", "Door 1", "Door 2");
-           
-            
+           if (input == 1)
+            {
+
+                Console.WriteLine("As you enter Door 1 you see a giant goblin ," + " Will you Flee or Fight?");
+
+
+
+
+
+            }
+
+
 
 
 
