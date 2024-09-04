@@ -66,8 +66,15 @@ namespace HelloDungeon
             }
         }
 
+        //Summary means quotes
 
-
+        /// <summary>
+        /// 
+        /// </summary> 
+        /// <param name="description">The names of the options</param>           
+        /// <param name="option1">The 1st option</param>
+        /// <param name="option2">The 2nd option</param>
+        /// <returns></returns>
         int GetInput(string description, string option1, string option2)
         {
             // Players Typed input
@@ -105,13 +112,15 @@ namespace HelloDungeon
                     Console.ReadKey();
                 }
             }
-
+           
+            // after loop, clear console;
             Console.Clear();
+            //return inputReceived integer;
             return inputRecieved;
         }
     
          
-
+        //Mothod declared 
         public void Run()
         {  // type name = value
             Player player1 = new Player(" Jim", Health: 20f, Mana: 50f, Stamina: 100, Gold: 5, Xp: 0f, HealthPotion: 5, ManaPotion: 5, Food: 3, Role: "", PlayerInput: "");
@@ -152,7 +161,7 @@ namespace HelloDungeon
 
             
             
-
+            //prints the players stats
             PrintPlayerStats(player1);
             Console.WriteLine(" Press Any Key To Continue ");
             Console.WriteLine("");
@@ -170,6 +179,10 @@ namespace HelloDungeon
 
         }  
 
+        /// <summary>
+        /// Function for printing the player's stats
+        /// </summary>
+        /// <param name="player">The instance of a player whose stats this function is printing</param>
         static void PrintPlayerStats(Player player)
         {
             Console.WriteLine(player.Name);  
