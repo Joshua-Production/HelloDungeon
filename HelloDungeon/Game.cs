@@ -128,14 +128,14 @@ namespace HelloDungeon
             Console.WriteLine(" You find yourself inside of what seems to be a cave with no exit or entrance ");
             Console.WriteLine("");
             Console.WriteLine(" Hello Jim"); 
-            Console.WriteLine(" I see that you found my dungeon... Now i will give you a choice would you like to be a Worrior or a Wizard? ");
-            Console.WriteLine(" Worrior = 1 | Wizzard = 2 ");
+            Console.WriteLine(" I see that you found my dungeon... Now i will give you a choice would you like to be a Warrior or a Wizard? ");
+            
             int input = 0;
 
            
             //Player Choices
 
-            input = GetInput(" Worrior = 1 | Wizzard = 2 ", " Worrior ", " Wizzard ");
+            input = GetInput(" Warrior = 1 | Wizzard = 2 ", " Warrior ", " Wizzard ");
             if (input == 1)
             {
                 player1.Role = "Warrior";
