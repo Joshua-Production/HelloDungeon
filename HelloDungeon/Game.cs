@@ -7,8 +7,9 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HelloDungeon
-{
+namespace HelloDungeon{
+
+}
     internal class Game
     {
         struct Player
@@ -125,7 +126,7 @@ namespace HelloDungeon
         //Mothod declared 
         public void Run()
         {  // type name = value
-            Player player1 = new Player(" Jim", Health: 20f, Mana: 50f, Stamina: 100, Gold: 5, Xp: 0f, HealthPotion: 5, ManaPotion: 5, Food: 3, Role: "", PlayerInput: "");
+            Player player1 = new Player(" Jim", Health: 20.0f, Mana: 50.0f, Stamina: 100, Gold: 5, Xp: 0.0f, HealthPotion: 5, ManaPotion: 5, Food: 3, Role: "", PlayerInput: "");
 
             Console.WriteLine(" You find yourself inside of what seems to be a cave with no exit or entrance ");
             Console.WriteLine("");
@@ -176,10 +177,29 @@ namespace HelloDungeon
            input = GetInput(" Two Doors appear infront of you These doors may look the same but the path they bring you on is for you to decide ", "Door 1", "Door 2");
            if (input == 1)
             {
+                input = 0;
+                input = GetInput("As you enter Door 1 you see a giant goblin will you", "Flee", "Fight");
+                if (input == 1)
+            {
+            Console.WriteLine(" As you turn to Flee the door slams shut trapping you in the room forcing you to fight. " +
+                 " You turn back around to see that the goblin is about to strike you. " +
+                 "You atempt to block but the goblin hits you! " +
+                 " Cutting your HP from " +
+           player1.Health + " To " + player1.Health / 2f);
+           Console.Write(" Press any key to continue ");
+           Console.ReadKey();
 
-                Console.WriteLine("As you enter Door 1 you see a giant goblin ," + " Will you Flee or Fight?");
+           Console.WriteLine(" As you get back up you dash at the goblin how will you attack? " +
+            "A double slash or A Strong Single Slash");
 
+           Console.WriteLine(" (Light) Double Slash or (Strong) Single Slash");
+                        input = Console.ReadLine();
+                        if (input == "Light")
+                       {
+                            Console.WriteLine(" You Slash twice and killed the goblin");
+                            Console.WriteLine();
 
+                            Console.WriteLine(" YOU WIN");
 
 
 
