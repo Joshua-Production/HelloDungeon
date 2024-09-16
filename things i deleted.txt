@@ -191,3 +191,34 @@ int GetInput(string description, string option1, string option2)
 
 
 }
+
+
+
+                /// <summary>
+                /// Function for printing the player's stats
+                /// </summary>
+                /// <param name="player">The instance of a player whose stats this function is printing</param>
+                static void PrintPlayerStats(Player player)
+         {
+            Console.WriteLine(player.Name);  
+            Console.WriteLine( " Health:" +          player.Health);
+            Console.WriteLine( " Mana:  " +          player.Mana);
+            Console.WriteLine( " Gold:  " +          player.Gold);
+            Console.WriteLine( " Xp:    " +          player.Xp);
+            Console.WriteLine( " HealthPotions:  " + player.HealthPotion);
+            Console.WriteLine( " ManaPotion:  " +    player.ManaPotion);
+            Console.WriteLine( " Food:  " +          player.Food);
+          }
+
+
+
+
+
+
+
+
+
+
+
+
+

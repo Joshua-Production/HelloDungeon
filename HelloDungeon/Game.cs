@@ -12,6 +12,22 @@ namespace HelloDungeon{
 }
 internal class Game
 {
+    /// <summary>
+    /// Function for printing the player's stats
+    /// </summary>
+    /// <param name="player">The instance of a player whose stats this function is printing</param>
+    static void PrintPlayerStats(Player player)
+    {
+        Console.WriteLine(player.Name);
+        Console.WriteLine(" Health:" + player.Health);
+        Console.WriteLine(" Mana:  " + player.Mana);
+        Console.WriteLine(" Gold:  " + player.Gold);
+        Console.WriteLine(" Xp:    " + player.Xp);
+        Console.WriteLine(" HealthPotions:  " + player.HealthPotion);
+        Console.WriteLine(" ManaPotion:  " + player.ManaPotion);
+        Console.WriteLine(" Food:  " + player.Food);
+
+    }
     struct Player
     {
         public string Name;
@@ -165,7 +181,7 @@ internal class Game
 
 
         //prints the players stats
-        PrintPlayerStats(player1);
+        PrintPlayerStats (player1);
         Console.WriteLine(" Press Any Key To Continue ");
         Console.WriteLine("");
         Console.ReadKey();
@@ -193,7 +209,7 @@ internal class Game
                  "A double slash or A Strong Single Slash");
 
                 Console.WriteLine(" (Light) Double Slash or (Strong) Single Slash");
-                input = Console.ReadLine();
+                string = Console.ReadLine();
                 if (input == "Light")
                 {
                     Console.WriteLine(" You Slash twice and killed the goblin");
@@ -230,6 +246,8 @@ internal class Game
 
 
 
+
+           
         }
     }
 }
