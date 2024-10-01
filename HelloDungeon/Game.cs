@@ -146,8 +146,8 @@ internal class Game
 
         Console.WriteLine(" You find yourself inside of what seems to be a cave with no exit or entrance ");
         Console.WriteLine("");
-        Console.WriteLine(" Hello Jim");
-        Console.WriteLine(" I see that you found my dungeon... Now i will give you a choice would you like to be a Warrior or a Wizard? ");
+        Console.WriteLine(" DEV (Hello Jim) ");
+        Console.WriteLine(" DEV (I see that you found my dungeon... Now i will give you a choice would you like to be a Warrior or a Wizard?) ");
 
         //default input value reset to 0
 
@@ -167,9 +167,9 @@ internal class Game
         }
 
 
-        Console.WriteLine(" So, you chose " + player1.Role);
+        Console.WriteLine(" DEV(So, you chose) " + player1.Role);
         Console.WriteLine("");
-        Console.WriteLine(" These are your stats.");
+        Console.WriteLine(" DEV(These are your stats.)");
         Console.WriteLine("");
 
 
@@ -181,7 +181,7 @@ internal class Game
 
 
         //prints the players stats
-        PrintPlayerStats (player1);
+        PrintPlayerStats(player1);
         Console.WriteLine(" Press Any Key To Continue ");
         Console.WriteLine("");
         Console.ReadKey();
@@ -190,66 +190,108 @@ internal class Game
 
         input = 0;
 
-        input = GetInput(" Two Doors appear infront of you These doors may look the same but the path they bring you on is for you to decide ", "Door 1", "Door 2");
+        input = GetInput(" DEV (Two Doors appear infront of you These doors may look the same but the path they bring you on is for you to decide) ", "Door 1", "Door 2");
+
         if (input == 1)
         {
             input = 0;
             input = GetInput("As you enter Door 1 you see a giant goblin will you", "Flee", "Fight");
-            if (input == 1)
-            {
-                Console.WriteLine(" As you turn to Flee the door slams shut trapping you in the room forcing you to fight. " +
-                     " You turn back around to see that the goblin is about to strike you. " +
-                     "You atempt to block but the goblin hits you! " +
-                     " Cutting your HP from " +
-               player1.Health + " To " + player1.Health / 2f);
-                Console.Write(" Press any key to continue ");
-                Console.ReadKey();
+            
 
-                Console.WriteLine(" As you get back up you dash at the goblin how will you attack? " +
-                 "A double slash or A Strong Single Slash");
-
-                Console.WriteLine(" (Light) Double Slash or (Strong) Single Slash");
-                string = Console.ReadLine();
-                if (input == "Light")
+                if (input == 1)
                 {
-                    Console.WriteLine(" You Slash twice and killed the goblin");
-                    Console.WriteLine();
+                    Console.WriteLine(" As you turn to Flee the door slams shut trapping you in the room forcing you to fight.");
+                    Console.WriteLine(" You turn back around to see that the goblin is about to strike you. ");
+                    Console.WriteLine("You atempt to block but the goblin hits you! ");
+                    Console.WriteLine(" Cutting your HP from " + player1.Health + " To " + player1.Health / 2f);
 
-                    Console.WriteLine(" YOU WIN");
-
+                    Console.Write(" Press any key to continue ");
+                    Console.ReadKey();
+                    input = 0;
+                    input = GetInput(" As you get back up you dash at the goblin how will you attack? ", " Stong single attack ", " Light double attack");
+                    if (input == 1)
+                    {
+                        Console.WriteLine(" You attack the Goblin with all of your might and kill it in one attack ");
+                        Console.WriteLine(" YOU WIN ");
+                    }
+                    if (input == 2)
+                    {
+                        Console.WriteLine(" You attack the Goblin with 2 swift attacks killing it ");
+                        Console.WriteLine(" YOU WIN");
+                        input = 0; ;
+                    }
 
 
                 }
 
+                if (input == 2)
+                {
 
+                    Console.WriteLine(" DEV (Ah so you choose to fight NICE the heart of a fighter just for that here is a buff)");
+                    Console.WriteLine(" BUFF(NEXT ATTACK IS A 1 SHOT");
+                    Console.WriteLine("You dash towards the goblin killing it in one attack");
+                    Console.WriteLine(" YOU WIN");
+                    input = 0;
 
+                }
 
-
-            }
-
-            /// <summary>
-            /// Function for printing the player's stats
-            /// </summary>
-            /// <param name="player">The instance of a player whose stats this function is printing</param>
-            static void PrintPlayerStats(Player player)
-            {
-                Console.WriteLine(player.Name);
-                Console.WriteLine(" Health:" + player.Health);
-                Console.WriteLine(" Mana:  " + player.Mana);
-                Console.WriteLine(" Gold:  " + player.Gold);
-                Console.WriteLine(" Xp:    " + player.Xp);
-                Console.WriteLine(" HealthPotions:  " + player.HealthPotion);
-                Console.WriteLine(" ManaPotion:  " + player.ManaPotion);
-                Console.WriteLine(" Food:  " + player.Food);
-
-            }
-
-
-
-
-           
+            
         }
+
+        if (input == 2)
+        {
+
+
+
+            Console.WriteLine(" As you enter door 2 you see there is a wizard waiting for you.");
+            Console.WriteLine(" You turn around and try to runaway but,");
+            Console.WriteLine(" the wizard hit you with a bolt of light cutting your HP from " + player1.Health + " To " + player1.Health / 2f);
+            Console.WriteLine(" Press any key to continue ");
+            Console.ReadKey();
+            Console.Clear();
+
+
+
+
+            Console.WriteLine(" You get back up from being hit");
+            Console.WriteLine(" DEV (Oh you didnt die i see well heres a speed buff you are gonna need it if you wanna keep up with the wizards spells)");
+            Console.WriteLine(" BUFF(LIGHT SPEED) ");
+            Console.WriteLine(" As the wizard charges up and fires his spell you dodge it and appear behind him killing him in one blow");
+            Console.WriteLine(" YOU WIN");
+
+
+            
+        }
+
+
+         
+         
+
+
+        /// <summary>
+        /// Function for printing the player's stats
+        /// </summary>
+        /// <param name="player">The instance of a player whose stats this function is printing</param>
+        static void PrintPlayerStats(Player player)
+        {
+            Console.WriteLine(player.Name);
+            Console.WriteLine(" Health:" + player.Health);
+            Console.WriteLine(" Mana:  " + player.Mana);
+            Console.WriteLine(" Gold:  " + player.Gold);
+            Console.WriteLine(" Xp:    " + player.Xp);
+            Console.WriteLine(" HealthPotions:  " + player.HealthPotion);
+            Console.WriteLine(" ManaPotion:  " + player.ManaPotion);
+            Console.WriteLine(" Food:  " + player.Food);
+
+        }
+
+
+
+
+
     }
 }
+
+
         
 
