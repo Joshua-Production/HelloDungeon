@@ -259,8 +259,6 @@ internal class Game
             Console.WriteLine(" As the wizard charges up and fires his spell you dodge it and appear behind him killing him in one blow");
             Console.WriteLine(" YOU WIN");
 
-
-            
         }
 
 
