@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Diagnostics;
@@ -6,6 +7,7 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Collections.Specialized.BitVector32;
 
 namespace HelloDungeon{
 
@@ -127,9 +129,58 @@ internal class Game
                 // Display error message
                 Console.WriteLine("Invalid Input");
                 Console.ReadKey();
+
             }
         }
+        // after loop, clear console;
+        Console.Clear();
+        //return inputReceived integer;
+        return inputRecieved;
+    }
+    int GetInput(string description, string option1, string option2, string option3)
+    {
+        // Players Typed input
+        string input = "";
+        int inputRecieved = 0;
 
+        // Input loop
+        while (inputRecieved != 1 && inputRecieved != 2 && inputRecieved != 3)
+        {
+            // Print options
+            Console.WriteLine(description);
+            Console.WriteLine("1. " + option1);
+            Console.WriteLine("2. " + option2);
+            Console.WriteLine("3. " + option3);
+            Console.Write("> ");
+            // Get input from player
+            input = Console.ReadLine();
+
+            // If player selected the first option
+            if (input == "1" || input == option1)
+            {
+                // Set inputRecieved to be the first option
+                inputRecieved = 1;
+            }
+            // Otherwise if the player selected the second option
+            else if (input == "2" || input == option2)
+            {
+                // Set inputRecieved to be the second option
+                inputRecieved = 2;
+            }
+            else if (input == "3" || input == option3)
+            {
+
+                // Set inputReciedved to be the third option
+                inputRecieved = 3;
+            }
+            // If none are true
+            else
+            {
+                // Display error message
+                Console.WriteLine("Invalid Input");
+                Console.ReadKey();
+            }
+        }
         // after loop, clear console;
         Console.Clear();
         //return inputReceived integer;
@@ -172,11 +223,20 @@ internal class Game
         Console.WriteLine(" DEV(These are your stats.)");
         Console.WriteLine("");
 
+        input = GetInput(" Dev (Now I will give you a choice of a accessory)", " Rick the Rock ", " Pablo ", " International Space Station");
 
-
-
-
-
+        if (input == 1)
+        {
+            Console.WriteLine(" Player has obtained Rick the Rock");
+        }
+        else if (input == 2)
+        {
+            Console.WriteLine(" Player has obtained Pablo");
+        }
+        else if (input == 3)
+        {
+            Console.WriteLine(" Player has obtained the entire International Space Station ");
+        } 
 
 
 
