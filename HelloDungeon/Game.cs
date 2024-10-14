@@ -220,10 +220,7 @@ internal class Game
 
         Console.WriteLine(" DEV(So, you chose) " + player1.Role);
         Console.WriteLine("");
-        Console.WriteLine(" DEV(These are your stats.)");
-        Console.WriteLine("");
-
-        input = GetInput(" Dev (Now I will give you a choice of a accessory)", " Rick the Rock ", " Pablo ", " International Space Station");
+        input = GetInput(" Dev (Now I will give you a choice of a accessory that will definitely change the course of the game)", " Rick the Rock ", " Pablo ", " International Space Station");
 
         if (input == 1)
         {
@@ -236,7 +233,11 @@ internal class Game
         else if (input == 3)
         {
             Console.WriteLine(" Player has obtained the entire International Space Station ");
-        } 
+        }
+        Console.WriteLine(" DEV(These are your stats.)");
+        Console.WriteLine("");
+
+       
 
 
 
