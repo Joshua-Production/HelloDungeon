@@ -1,6 +1,6 @@
 # HelloDungeon
 go to https://github.com/Joshua-Production/HelloDungeon
-Click the release thats named Hello Dungeon v1.0
+Click the release thats named Hello Dungeon 
 After clicking it click the Hello.Dungeon.V.1.zip
 go to your downloads file
 unzip the file
